@@ -37,7 +37,7 @@ def randomize_array(arr):
 
 st.set_page_config(page_title="Your Custom Database Driven Chatbot", page_icon="images/icon.png", layout="wide")
 
-st.header("Ask your musical theater. \n")
+st.header("Ask your musical theater questions. \n")
 
 
 # Define the name of the index and the dimensionality of the embeddings
@@ -253,4 +253,4 @@ if st.session_state['generated']:
 
 
 # Add a title to the sidebar
-st.sidebar.title("Musical Theater Assistant")
+st.sidebar.title("Musical Theater AI Assistant")
