@@ -11,12 +11,12 @@ import random
 from PIL import Image
 
 # When you are working locally set your api keys with this:
-openai.api_key = os.getenv('OPENAI_API_KEY')
-pinecone_api_key = os.getenv('PINECONE_API_KEY')
+# openai.api_key = os.getenv('OPENAI_API_KEY')
+# pinecone_api_key = os.getenv('PINECONE_API_KEY')
 
 # When you are uploading to Streamlit, set your keys like this:
-# pinecone_api_key = st.secrets["API_KEYS"]["pinecone"]
-# openai.api_key = st.secrets["API_KEYS"]["openai"]
+pinecone_api_key = st.secrets["API_KEYS"]["pinecone"]
+openai.api_key = st.secrets["API_KEYS"]["openai"]
 
 pinecone.init(api_key=pinecone_api_key, environment="us-west4-gcp")
 
@@ -36,7 +36,7 @@ def randomize_array(arr):
 
 st.set_page_config(page_title="Your Custom Database Driven Chatbot", page_icon="images/icon.png", layout="wide")
 
-st.header("Ask your resources questions. \n")
+st.header("Ask your musical theater. \n")
 
 
 # Define the name of the index and the dimensionality of the embeddings
@@ -229,7 +229,7 @@ def clear_text():
 
 # We will get the user's input by calling the get_text function
 def get_text():
-    input_text = st.text_input("Input a question here! For example: \"Tell me about 20th century musical theater in America.\". \n Also, I have no memory of previous questions!😊")
+    input_text = st.text_input("Input a question here! For example: \"Tell me about 20th century musical theater in America.\" \n Also, I have no memory of previous questions!😊")
     return input_text
 
 
