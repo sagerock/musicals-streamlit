@@ -26,6 +26,8 @@ def _max_width_():
 
 _max_width_()
 
+st.set_page_config()
+
 # When you are working locally set your api keys with this:
 # openai.api_key = os.getenv('OPENAI_API_KEY')
 # pinecone_api_key = os.getenv('PINECONE_API_KEY')
