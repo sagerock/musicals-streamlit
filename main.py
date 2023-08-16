@@ -252,3 +252,5 @@ if st.session_state['generated']:
         message(st.session_state['past'][i], is_user=True,avatar_style="personas",seed=user_av, key=str(i) + '_user')
 
 
+# Add a title to the sidebar
+st.sidebar.title("Musical Theater Assistant")
