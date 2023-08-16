@@ -10,6 +10,22 @@ import random
 
 from PIL import Image
 
+def _max_width_():
+    max_width_str = f"max-width: 600px;"
+    st.markdown(
+        f"""
+<style>
+    .reportview-container .main .block-container{{
+        {max_width_str}
+    }}
+</style>
+""",
+        unsafe_allow_html=True,
+    )
+
+
+_max_width_()
+
 # When you are working locally set your api keys with this:
 # openai.api_key = os.getenv('OPENAI_API_KEY')
 # pinecone_api_key = os.getenv('PINECONE_API_KEY')
